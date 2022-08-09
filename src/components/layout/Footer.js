@@ -98,7 +98,7 @@ export const Footer = (props) => {
                             Sobre a Loumar
                         </Button>
                     </Link>
-                    <Link href={'/'} passHref>
+                    <Link href={'/comprasParaguai'} passHref>
                         <Button sx={styles.buttonText}>
                             Compras Paraguai
                         </Button>
