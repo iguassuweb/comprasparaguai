@@ -1,48 +1,59 @@
-import { Box, Grid, Text, Button } from "../../core"
-import { VideoButton } from "../VideoButton";
+import React from "react"
+import { Box, Text, Grid, Button } from "../../core"
 
 export const Seguranca = () => {
     return (
-        <Box
-            sx={{
-                // backgroundImage: "url(/bg-ful.png)",
-                width: "100%",
-                my: 3,
-                backgroundRepeat: "repeat",
-                backgroundPosition: "right center",
-                backgroundSize: "auto"
-            }}
-        >
-            <Grid container>
-                <Grid item xs={12} sm={12} md={6} lg={6}>
-                    <Box sx={{ width: '100%', display: 'flex', justifyContent: 'center', height: '100%' }}>
-                        <Box sx={{ maxWidth: { xs: 330, sm: 330, md: 480 }, width: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
-                            <Text variant="h1" sx={{ fontWeight: 500, fontSize: 42 }}>Shopping in Paraguay</Text>
-                            <Text sx={{ my: 2, fontSize: 21 }}>Assista o vídeo de nosso especialista em Foz sobre como comprar com segurança no Paraguai</Text>
-                            <Text sx={{ my: 2, fontSize: 21 }}>Com a Loumar Turismo é muito mais fácil, cômodo e seguro fazer compras em Ciudad del Este. Confira os horários de saída de nossas vans de todos os hotéis de Foz do Iguaçu. </Text>
-                            <Box sx={{ width: '100%' }}>
-                                <Button
-                                    variant="contained"
-                                    fullWidth
-                                    sx={{
-                                        backgroundColor: '#007a73',
-                                        paddingBlock: 1.5,
-                                        '&:hover': { background: 'linear-gradient(79.94deg, rgba(0, 162, 174, 0.9) 0%, rgba(4, 148, 164, 0.9) 34.79%, rgba(30, 52, 96, 0.9) 101.2%)' }, transition: '.2s ease-in-out'
-                                    }}>Adquirir nosso Guia de Compras</Button>
-                            </Box>
+        <Box sx={{ maxWidth: "1200px" }}>
+            <Box sx={{ flexGrow: 1, mx: { xs: 2, sm: 0 }, my: 10 }}>
+                <Grid container spacing={2} sx={{ my: 4 }}>
+                    <Grid item md={5} xs={12}>
+                        <Text
+                            variant="h1" style={{ fontSize: 40, fontWeight: 500, color: "#1E3460", pb: 3 }}
+                        >
+                            Compras no Paraguai
+                        </Text>
+                        <Text
+                            sx={{
+                                borderBottom: "1px solid lightgray",
+                                color: "#1E3460",
+                                maxWidth: "95%",
+                                pb: 3,
+                            }}
+                        >
+                        </Text>
+                        <Text sx={{ my: 3, fontWeight: 500, fontSize: 20, color: "#1E3460" }}>
+                            Assista o vídeo de nosso especialista em Foz sobre como comprar com segurança no Paraguai
+                        </Text>
+                        <Text sx={{ my: 2, fontWeight: 500, fontSize: 18, color: "#1E3460" }}>
+                            Com a Loumar Turismo é muito mais fácil, cômodo e seguro fazer compras em Ciudad del Este. Confira os horários de saída de nossas vans de todos os hotéis de Foz do Iguaçu.
+                        </Text>
+                        <Box sx={{ width: '100%' }}>
+                            <Button
+                                variant="contained"
+                                fullWidth
+                                sx={{
+                                    backgroundColor: '#007a73',
+                                    paddingBlock: 1.5,
+                                    '&:hover': { background: 'linear-gradient(79.94deg, rgba(0, 162, 174, 0.9) 0%, rgba(4, 148, 164, 0.9) 34.79%, rgba(30, 52, 96, 0.9) 101.2%)' }, transition: '.2s ease-in-out'
+                                }}>Adquirir nosso Guia de Compras</Button>
                         </Box>
-                    </Box>
+                    </Grid>
+                    <Grid item md={7} xs={12}>
+                        <Box sx={{ borderRadius: 4, overflow: "hidden" }}>
+                            <iframe
+                                src="https://www.youtube.com/embed/_QmuG3nvTME"
+                                frameBorder="0"
+                                scrolling="no"
+
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowFullScreen
+                                style={{ minWidth: "100%", minHeight: "350px", height: "auto", display: "block" }}
+                            ></iframe>
+                        </Box>
+                    </Grid>
                 </Grid>
-                <Grid item xs={12} sm={12} md={6} lg={6}>
-                    <Box sx={{ width: '70%', display: 'flex', justifyContent: 'center', paddingInline: 2 }}>
-                        <VideoButton
-                            urlVideo="https://www.youtube.com/watch?v=_QmuG3nvTME"
-                            urlThumb="/main-image.png"
-                            title="Segurança na compra de bagagens"
-                        />
-                    </Box>
-                </Grid>
-            </Grid>
+            </Box>
         </Box>
-    );
-};
+    )
+}
+export default Seguranca;
