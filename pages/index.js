@@ -37,7 +37,7 @@ export default function Home({ page, scheduleVideos, categories, playlist }) {
 
 export const getStaticProps = async () => {
   const pages = await getPages();
-  const page = pages.filter((page) => page.name === "Home")[0];
+  const page = pages?.filter((page) => page.name === "Home")[0];
   const scheduleVideos = await getScheduleVideos();
   const categories = await getCategories();
   // const playlist = await getYoutubePlaylist();
@@ -47,7 +47,7 @@ export const getStaticProps = async () => {
       page,
       scheduleVideos,
       categories,
-      // playlist: playlist.items,
+      // playlist: playlist?.items,
     },
     revalidate: 1200,
   };

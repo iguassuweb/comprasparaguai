@@ -52,7 +52,7 @@ export const Header = () => {
     { title: "Passeios", url: "" },
     { title: "Hotéis", url: "" },
     { title: "Passaporte", url: "" },
-    { title: "Compras Paraguai", url: "" },
+    { title: "Compras Paraguai", url: "/comprasParaguai" },
     { title: "Blog", url: "" },
   ];
 

@@ -8,7 +8,7 @@ export const Seguranca = () => {
                 <Grid container spacing={2} sx={{ my: 4 }}>
                     <Grid item md={5} xs={12}>
                         <Text
-                            variant="h1" style={{ fontSize: 40, fontWeight: 500, color: "#1E3460", pb: 3 }}
+                            variant="h1" style={{ fontSize: 40, fontWeight: 600, color: "#1E3460", pb: 3 }}
                         >
                             Compras no Paraguai
                         </Text>
@@ -21,7 +21,7 @@ export const Seguranca = () => {
                             }}
                         >
                         </Text>
-                        <Text sx={{ my: 3, fontWeight: 500, fontSize: 20, color: "#1E3460" }}>
+                        <Text sx={{ my: 3, fontWeight: 600, fontSize: 20, color: "#1E3460" }}>
                             Assista o vídeo de nosso especialista em Foz sobre como comprar com segurança no Paraguai
                         </Text>
                         <Text sx={{ my: 2, fontWeight: 500, fontSize: 18, color: "#1E3460" }}>

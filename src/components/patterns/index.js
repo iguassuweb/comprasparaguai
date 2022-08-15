@@ -5,6 +5,7 @@ export { ImageSlider } from './imageSlider';
 export { Contato } from './Contato';
 export { Categories } from './Home/Categories';
 export { Seguranca } from './ComprasParaguai/Seguranca';
+export { Transportes } from './ComprasParaguai/Transportes';
 export { YoutubeShare } from './Home/YoutubeShare';
 export { InstaHome } from './Home/InstaHome';
 export { FazerEmFoz } from './Home/FazerEmFoz';
