@@ -6,9 +6,9 @@ import { BodyContainer, Header, Footer } from "../src/components/layout";
 import {
   WebStories,
   ImageSlider,
-  Clientes,
   Seguranca,
-  Transportes
+  Transportes,
+  Dicas,
 } from "../src/components/patterns";
 
 export default function comprasParaguai({ page }) {
@@ -20,7 +20,7 @@ export default function comprasParaguai({ page }) {
       <WebStories page={page} />
       <Seguranca />
       <Transportes />
-      <Clientes />
+      <Dicas />
       <Footer />
     </BodyContainer>
   );
