@@ -8,7 +8,8 @@ import {
   ImageSlider,
   Seguranca,
   Transportes,
-  Dicas,
+  // Dicas,
+  Bagagem,
 } from "../src/components/patterns";
 
 export default function comprasParaguai({ page }) {
@@ -20,7 +21,8 @@ export default function comprasParaguai({ page }) {
       <WebStories page={page} />
       <Seguranca />
       <Transportes />
-      <Dicas />
+      {/* <Dicas /> */}
+      <Bagagem />
       <Footer />
     </BodyContainer>
   );
