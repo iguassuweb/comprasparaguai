@@ -6,7 +6,7 @@ export { Contato } from './Contato';
 export { Categories } from './Home/Categories';
 export { Seguranca } from './ComprasParaguai/Seguranca';
 export { Transportes } from './ComprasParaguai/Transportes';
-// export { Dicas } from './ComprasParaguai/Dicas';
+export { Dicas } from './ComprasParaguai/Dicas';
 // export { Duvidas } from './ComprasParaguai/Duvidas';
 export { Bagagem } from './ComprasParaguai/Bagagem';
 export { YoutubeShare } from './Home/YoutubeShare';
