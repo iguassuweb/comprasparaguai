@@ -5,26 +5,27 @@ export const Seguranca = () => {
     return (
         <Box sx={{ maxWidth: "1200px" }}>
             <Box sx={{ flexGrow: 1, mx: { xs: 2, sm: 0 }, my: 10 }}>
-                <Grid container spacing={2} sx={{ my: 4 }}>
-                    <Grid item md={5} xs={12}>
+                <Grid container spacing={2}>
+                    <Grid item md={12} xs={12}>
                         <Text
                             variant="h1" style={{ fontSize: 40, fontWeight: 600, color: "#1E3460", pb: 3 }}
                         >
                             Compras no Paraguai
                         </Text>
+                    </Grid>
+                    <Grid item md={5} xs={12}>
                         <Text
                             sx={{
                                 borderBottom: "1px solid lightgray",
                                 color: "#1E3460",
-                                maxWidth: "95%",
-                                pb: 3,
+                                maxWidth: "100%",
                             }}
                         >
                         </Text>
                         <Text sx={{ my: 3, fontWeight: 600, fontSize: 20, color: "#1E3460" }}>
                             Assista o vídeo de nosso especialista em Foz sobre como comprar com segurança no Paraguai
                         </Text>
-                        <Text sx={{ my: 2, fontWeight: 500, fontSize: 18, color: "#1E3460" }}>
+                        <Text sx={{ my: 3, fontWeight: 500, fontSize: 18, color: "#1E3460" }}>
                             Com a Loumar Turismo é muito mais fácil, cômodo e seguro fazer compras em Ciudad del Este. Confira os horários de saída de nossas vans de todos os hotéis de Foz do Iguaçu.
                         </Text>
                         <Box sx={{ width: '100%' }}>
@@ -32,6 +33,7 @@ export const Seguranca = () => {
                                 variant="contained"
                                 fullWidth
                                 sx={{
+                                    my: 3,
                                     backgroundColor: '#007a73',
                                     paddingBlock: 1.5,
                                     '&:hover': { background: 'linear-gradient(79.94deg, rgba(0, 162, 174, 0.9) 0%, rgba(4, 148, 164, 0.9) 34.79%, rgba(30, 52, 96, 0.9) 101.2%)' }, transition: '.2s ease-in-out'

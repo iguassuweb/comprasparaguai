@@ -9,7 +9,7 @@ import {
   Seguranca,
   Transportes,
   Dicas,
-  // Duvidas,
+  Duvidas,
   Bagagem,
 } from "../src/components/patterns";
 
@@ -23,7 +23,7 @@ export default function comprasParaguai({ page }) {
       <Seguranca />
       <Transportes />
       <Dicas />
-      {/* <Duvidas /> */}
+      <Duvidas />
       <Bagagem />
       <Footer />
     </BodyContainer>

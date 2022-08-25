@@ -4,7 +4,7 @@ import { Box, Text, Grid, Button } from "../../core"
 export const Bagagem = () => {
     return (
         <Box sx={{ maxWidth: "800px" }}>
-            <Box sx={{ flexGrow: 1, mx: { xs: 2, sm: 0 }, my: 10 }}>
+            <Box sx={{ flexGrow: 1, mx: { xs: 2, sm: 0 }, my: 0 }}>
                 <Grid container spacing={2} sx={{ my: 4 }}>
                     <Grid item md={12} xs={12}>
                         <Text sx={{ my: 2, textAlign: "center", fontWeight: 500, fontSize: 24, color: "#1E3460" }}>
