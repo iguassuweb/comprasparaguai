@@ -1,0 +1,85 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+ul {
+  list-style-image: url('/icon-lista.svg');
+  padding: 0 28px;
+
+}
+@media screen and (max-width: 1000px) {
+  li {
+        font-size: 14px;
+  }
+}
+.pad-5 {
+  padding: 1em;
+}
+.css-qjq2ar-MuiGrid-root {
+      margin-left: 0;
+
+}
+.container-cards--categorias {
+  background-image: url("http://localhost:3000/bg-ful.png");
+  background-position: right;
+  background-repeat: no-repeat;
+}
+.image {
+  background-size: cover;
+  min-width: 100%;
+  min-height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.right-arrow {
+  position: absolute;
+  top: 50%;
+  right: 32px;
+  font-size: 3rem;
+  color:  rgba(67, 67, 67, 0.3);
+  z-index: 10;
+  cursor: pointer;
+  user-select: none;
+}
+.left-arrow {
+  position: absolute;
+  top: 50%;
+  left: 32px;
+  font-size: 3rem;
+  color: rgba(67, 67, 67, 0.3);
+  z-index: 10;
+  cursor: pointer;
+  user-select: none;
+}
+.slide {
+  opacity: .2;
+  transition-duration: 1.5s ease-in-out;
+  transform: scale(1);
+
+}
+.slide.active {
+  opacity: 1;
+  transition-duration: 1.5s;
+  transform: scale(1);
+  height: 59vh;
+} 
+.slider-img {
+  border-radius: 0px 0px 30px 30px;
+  box-shadow: rgb(0 0 0 / 37%) 0px 2px 26px 2px;
+  background-position: bottom;
+  height: 64vh;
+  background-size: cover;
+}
