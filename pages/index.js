@@ -1,35 +1,30 @@
 import Head from "next/head";
 import {
-  getCategories,
-  getPages,
-  getScheduleVideos,
-  // getYoutubePlaylist,
+  getPages
 } from "../src/api/webservice";
 import { BodyContainer, Header, Footer } from "../src/components/layout";
 import {
   WebStories,
   ImageSlider,
-  InstaHome,
-  // YoutubeShare,
-  FazerEmFoz,
-  Clientes,
-  TempoMercado,
-  Categories,
+  Seguranca,
+  Transportes,
+  Dicas,
+  Duvidas,
+  Bagagem,
 } from "../src/components/patterns";
 
-export default function Home({ page, scheduleVideos, categories, playlist }) {
+export default function comprasParaguai({ page }) {
   return (
     <BodyContainer>
       <Head />
       <Header />
       <ImageSlider slider={page.slider} />
       <WebStories page={page} />
-      <Categories categories={categories} />
-      <InstaHome />
-      {/* <YoutubeShare scheduleVideos={scheduleVideos} playlist={playlist} /> */}
-      <FazerEmFoz />
-      <TempoMercado />
-      <Clientes />
+      <Seguranca />
+      <Transportes />
+      <Dicas />
+      <Duvidas />
+      <Bagagem />
       <Footer />
     </BodyContainer>
   );
@@ -37,17 +32,11 @@ export default function Home({ page, scheduleVideos, categories, playlist }) {
 
 export const getStaticProps = async () => {
   const pages = await getPages();
-  const page = pages?.filter((page) => page.name === "Home")[0];
-  const scheduleVideos = await getScheduleVideos();
-  const categories = await getCategories();
-  // const playlist = await getYoutubePlaylist();
+  const page = pages.filter((page) => page.name === "Home")[0];
 
   return {
     props: {
-      page,
-      scheduleVideos,
-      categories,
-      // playlist: playlist?.items,
+      page
     },
     revalidate: 1200,
   };
