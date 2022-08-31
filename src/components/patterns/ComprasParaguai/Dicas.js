@@ -79,7 +79,7 @@ export const Dicas = () => {
                                             <Text
                                                 variant="h5"
                                                 paragraph={true}
-                                                style={{ color: "#1E3460" }}
+                                                style={{ fontSize: 18, fontWeight: 400, color: "#1E3460" }}
                                                 sx={{
                                                 marginBlock: "1rem",
                                                 }}
@@ -107,17 +107,17 @@ export const Dicas = () => {
                                                 src={`/leftArrowIcon.svg`}
                                                 layout='fill'
                                                 alt='Voltar'
-                                                sx={{ background: "#007A73" }}
                                                 />
                                             </IconButton>
                                             <Text
                                                 variant="h4" 
                                                 style={{ 
-                                                    fontSize: 15, 
-                                                    fontWeight: 500, 
+                                                    fontSize: 14, 
+                                                    fontWeight: 400, 
+                                                    color: "#323232", 
                                                 }}
                                                 sx={{
-                                                    marginBlock: "1rem",
+                                                    marginBlock: "1rem", 
                                                     padding: { xs: 0, md: 1.5 }
                                                 }}
                                             >
@@ -126,8 +126,9 @@ export const Dicas = () => {
                                             <Text
                                                 variant="h4" 
                                                 style={{ 
-                                                    fontSize: 15, 
-                                                    fontWeight: 500, 
+                                                    fontSize: 14, 
+                                                    fontWeight: 400, 
+                                                    color: "#323232", 
                                                 }}
                                                 sx={{
                                                     marginBlock: "1rem", 

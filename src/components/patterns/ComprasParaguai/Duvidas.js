@@ -71,7 +71,7 @@ export const Duvidas = () => {
                                         >
                                             <Text
                                             >
-                                                <b style={{ fontSize: 20, fontWeight: 500, color: "#1E3460", paddingLeft: "2%" }}
+                                                <b style={{ fontSize: 20, fontWeight: 400, color: "#060839", paddingLeft: "2%" }}
                                                 >
                                                     Qual o valor da cota para as compras no paraguai?
                                                 </b>{" "}
@@ -97,6 +97,7 @@ export const Duvidas = () => {
                                         display="flex"
                                         justifyContent="center"
                                         sx={{ flexDirection: "column" }}
+                                        style={{ fontSize: 16, fontWeight: 400, color: "#5E5E60" }}
                                         >
                                             <Text
                                             >
@@ -146,7 +147,7 @@ export const Duvidas = () => {
                                         >
                                             <Text
                                             >
-                                                <b style={{ fontSize: 20, fontWeight: 500, color: "#1E3460", paddingLeft: "2%" }}
+                                                <b style={{ fontSize: 20, fontWeight: 400, color: "#060839", paddingLeft: "2%" }}
                                                 >
                                                     Quais Bens são isentos?
                                                 </b>{" "}
@@ -175,7 +176,7 @@ export const Duvidas = () => {
                                         >
                                             <Text
                                             >
-                                                <b style={{ fontSize: 20, fontWeight: 500, color: "#1E3460", paddingLeft: "2%" }}
+                                                <b style={{ fontSize: 20, fontWeight: 400, color: "#060839", paddingLeft: "2%" }}
                                                 >
                                                     Quais Bens não são isentos?
                                                 </b>{" "}
@@ -204,7 +205,7 @@ export const Duvidas = () => {
                                         >
                                             <Text
                                             >
-                                                <b style={{ fontSize: 20, fontWeight: 500, color: "#1E3460", paddingLeft: "2%" }}
+                                                <b style={{ fontSize: 20, fontWeight: 400, color: "#060839", paddingLeft: "2%" }}
                                                 >
                                                     Qual a cota para menores de idade?
                                                 </b>{" "}
@@ -233,7 +234,7 @@ export const Duvidas = () => {
                                         >
                                             <Text
                                             >
-                                                <b style={{ fontSize: 20, fontWeight: 500, color: "#1E3460", paddingLeft: "2%" }}
+                                                <b style={{ fontSize: 20, fontWeight: 400, color: "#060839", paddingLeft: "2%" }}
                                                 >
                                                     Quais documentos são necessários?
                                                 </b>{" "}
@@ -262,7 +263,7 @@ export const Duvidas = () => {
                                         >
                                             <Text
                                             >
-                                                <b style={{ fontSize: 20, fontWeight: 500, color: "#1E3460", paddingLeft: "2%" }}
+                                                <b style={{ fontSize: 20, fontWeight: 400, color: "#060839", paddingLeft: "2%" }}
                                                 >
                                                     O que é proibido trazer ao Brasil?
                                                 </b>{" "}
@@ -291,7 +292,7 @@ export const Duvidas = () => {
                                         >
                                             <Text
                                             >
-                                                <b style={{ fontSize: 20, fontWeight: 500, color: "#1E3460", paddingLeft: "2%" }}
+                                                <b style={{ fontSize: 20, fontWeight: 400, color: "#060839", paddingLeft: "2%" }}
                                                 >
                                                     Qual a quantidade permitida?
                                                 </b>{" "}
