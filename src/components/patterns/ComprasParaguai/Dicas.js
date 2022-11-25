@@ -102,7 +102,7 @@ export const Dicas = () => {
                                             <Box sx={{ height: 4, width: 45, borderRadius: 1, backgroundColor: '#1E3460', opacity: "0.15", my: 2, marginRight: 1 }} />
                                         </Box>
                                         <Box sx={{ display: "flex" }}>
-                                            <IconButton sx={{ padding: { xs: 0, md: 1.5 } }}>
+                                            <IconButton sx={{ width: "24px" }}>
                                                 <Image
                                                 src={`/leftArrowIcon.svg`}
                                                 layout='fill'
@@ -137,7 +137,7 @@ export const Dicas = () => {
                                             >
                                                 Próxima
                                             </Text>
-                                            <IconButton sx={{ padding: { xs: 0, md: 1.5 } }}>
+                                            <IconButton sx={{ width: "24px" }}>
                                                 <Image
                                                 src={`/rightArrowIcon.svg`}
                                                 layout='fill'

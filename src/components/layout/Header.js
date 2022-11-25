@@ -37,7 +37,7 @@ export const Header = () => {
   const routes = [
     { title: "Home", url: "/" },
     { title: "Transportes", url: "/transportes" },
-    { title: "Passeios", url: "/passeios" },
+    { title: "Passeios", url: "/passeios-em-foz-do-iguacu" },
     { title: "Hotéis", url: "/hoteis" },
     { title: "Blog", url: "/blog" },
   ];
@@ -45,14 +45,14 @@ export const Header = () => {
   const mobileRoutes = [
     { title: "Home", url: "/" },
     { title: "Transportes", url: "/transportes" },
-    { title: "O que fazer em foz?", url: "/passeios" },
+    { title: "O que fazer em foz?", url: "/passeios-em-foz-do-iguacu" },
     { title: "Sobre a Loumar", url: "/hoteis" },
     { title: "Carrinho", url: "/blog" },
     { title: "Meus pedidos", url: "" },
     { title: "Passeios", url: "" },
     { title: "Hotéis", url: "" },
     { title: "Passaporte", url: "" },
-    { title: "Compras Paraguai", url: "/comprasParaguai" },
+    { title: "Compras Paraguai", url: "" },
     { title: "Blog", url: "" },
   ];
 
@@ -181,26 +181,26 @@ export const Header = () => {
             </Box>
           </Drawer>
         </Box>
-        <Box sx={styles.logoContainer}>
-          <Link href="/" passHref>
-            <a style={{ minWidth: 58 }}>
+        <Link href="/" passHref>
+          <a style={{ minWidth: 58 }}>
+            <Box sx={styles.logoContainer}>
               <Image
-                src={`/LoumarTurismoLogo.svg`}
-                width={58}
-                height={48}
+                src={`/logo-loumar.png`}
+                layout="fill"
+                objectFit="contain"
                 alt="Logotipo Loumar Turismo"
               />
-            </a>
-          </Link>
-          <Box sx={styles.logoText}>
+              {/* <Box sx={styles.logoText}>
             <Text>Especialista em</Text>
             <Text>Foz do Iguaçu</Text>
-          </Box>
-        </Box>
+          </Box> */}
+            </Box>
+          </a>
+        </Link>
         <Stack direction="row" sx={styles.desktopMenuContainer}>
           {routes.map((page) => (
             <Link key={`page${page.title}`} href={page.url} passHref>
-              <Button sx={[styles.desktopMenuItems, page.url === pathname ? {borderBottom: '3px solid white'} : {}]}>
+              <Button sx={[styles.desktopMenuItems, page.url === pathname ? { borderBottom: '3px solid white' } : {}]}>
                 {page.title}
               </Button>
             </Link>
@@ -221,7 +221,11 @@ const styles = {
     height: { xs: 32, sm: 32, md: 72, lg: 72, xl: 72 },
     padding: 0,
     backgroundColor: "#E5E5E5",
-    marginBottom: 6
+    marginBottom: 6,
+    position: "fixed",
+    top: 0,
+    width: "100%",
+    zIndex: 100
   },
   socialToolBar: {
     justifyContent: "space-between",
@@ -248,6 +252,10 @@ const styles = {
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
+    width: "180px",
+    height: "200px",
+    position: "relative",
+    marginRight: "20px",
   },
   logoText: {
     whiteSpace: 'nowrap',
@@ -270,10 +278,12 @@ const styles = {
     fontSize: 14,
     fontWeight: 400,
     textTransform: "none",
-  //   '&:hover': { 
-  //     color: '#00A2AE'
-  // },
-  borderRadius: 0,
+    //   '&:hover': { 
+    //     color: '#00A2AE'
+    // },
+    borderRadius: 0,
+    borderBottomRightRadius: "2px",
+    borderBottomLeftRadius: "2px"
   },
   cartContainer: {
     justifyContent: 'flex-end',

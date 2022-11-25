@@ -1,14 +1,13 @@
 import React, { useState, useEffect, useRef } from "react";
 const _ = require('lodash')
 import { motion, useAnimation } from 'framer-motion'
-import { Box, Text, Button, Paper, Image, IconButton, Dialog } from "../core"
+import { Box, Text, Button, Paper, Image, IconButton } from "../core"
 import { StoryDialog } from "./StoryDialog"
-import api from '../../api'
 
 
-export const WebStories = ({ page }) => {
+export const WebStories = ({ page, customWidth = '100%', customStoryHeight = '350px', customStoryWidth = '240px' }) => {
 
-  const { webStories: stories } = page
+  let stories = page?.webStories
 
   const [carouselWidth, setCarouselWidth] = useState(0)
   const carousel = useRef()
@@ -42,9 +41,9 @@ export const WebStories = ({ page }) => {
   }
 
   return (
-    <Box>
+    <Box sx={{ maxWidth: { xs: "800px", md: "96%" }, }} >
       <Text variant='h1' sx={{ display: { md: 'none', lg: 'none', xl: 'none' }, alignSelf: 'start', marginInline: { xs: '1.5rem', sm: '3.5rem' }, marginTop: 5, color: '#1E3460' }}>Webstories</Text>
-      <Box sx={styles.container}>
+      <Box sx={[styles.container, { width: customWidth }]}>
         <IconButton sx={styles.button} onClick={onLeftClick}>
           <Image
             src={`/leftArrowIcon.svg`}
@@ -54,19 +53,27 @@ export const WebStories = ({ page }) => {
         </IconButton>
         <Box sx={styles.mobileStoriesContainer} ref={carousel}>
           <motion.div drag='x' animate={animation} onUpdate={onUpdate} dragDirectionLock dragConstraints={{ right: 0, left: -carouselWidth }} whileTap={{ cursor: 'grabbing' }} style={{ flexDirection: 'row', display: 'flex', '&:active': { cursor: 'grabbing' } }} transition={{ bounce: 0 }}>
-            {stories.map((story, index) => (
-              <Paper elevation={4} sx={styles.paperContainer} key={`story${index}`}>
-                <Button onClick={() => setStoryUrl(story.url)} sx={styles.storyBottun}>
-                  <Image
-                    src={`${story.thumbUrl}`}
-                    alt={story.title}
-                    layout='fill'
-                  />
+            {!!stories && stories.map((story, index) => (
+              <Paper elevation={4} sx={[styles.paperContainer, { minHeight: customStoryHeight, minWidth: customStoryWidth }]} key={`story${index}`}>
+                <Button onClick={() => setStoryUrl(story.url)} sx={[styles.storyButton, { width: customStoryWidth, height: customStoryHeight, }]}>
+                  <Box className='image' sx={{
+                    width: customStoryWidth,
+                    height: customStoryHeight,
+                    borderRadius: '6%',
+                    overflow: 'hidden',
+                    position: 'relative',
+                  }}>
+                    <Image
+                      src={story.thumbUrl}
+                      alt={story.title}
+                      layout='fill'
+                    />
+                  </Box>
                   <Box sx={styles.textContainer}>
-                    <Text style={{ fontSize: 16, fontWeight: '500' }}>
+                    <Text style={{ fontSize: 20, fontWeight: '500' }}>
                       {story.title}
                     </Text>
-                    <Text style={{ fontSize: 14, fontWeight: '500' }}>
+                    <Text style={{ fontSize: 14, fontWeight: '400' }}>
                       {story.subtitle}
                     </Text>
                   </Box>
@@ -84,24 +91,24 @@ export const WebStories = ({ page }) => {
         </IconButton>
         <StoryDialog url={storyUrl} open={storyUrl} handleClose={() => setStoryUrl(false)} />
       </Box>
-    </Box>
+    </Box >
   )
 }
 
 
 const styles = {
   container: {
-    width: '100vw',
     display: 'flex',
     justifyContent: 'center',
-    paddingLeft: { xs: 0, sm: 0, md: '1.5rem', lg: '2.5rem', xl: '9rem' },
-    paddingRight: { xs: 0, sm: 0, md: '1.5rem', lg: '2.5rem', xl: '9rem' },
-    marginBlock: 4
+    paddingLeft: { xs: 0, sm: 0, md: '1rem', lg: '1rem', xl: '0' },
+    paddingRight: { xs: 0, sm: 0, md: '1rem', lg: '1rem', xl: '0' },
+
   },
   storiesContainer: {
     display: { xs: 'none', sm: 'none', md: 'none', lg: 'none', xl: 'none' },
     flexDirection: 'row',
     justifyContent: 'space-between',
+    borderRadius: '20px',
   },
   mobileStoriesContainer: {
     display: { xs: 'flex', sm: 'flex', md: 'flex', lg: 'flex', xl: 'flex' },
@@ -113,27 +120,28 @@ const styles = {
   paperContainer: {
     marginInline: '0.8rem',
     marginBlock: '2rem',
-    borderRadius: '10%',
+    borderRadius: '20px',
     alignItems: 'center',
     justifyContent: 'center',
-    minHeight: 200,
-    minWidth: 150,
-    position: 'relative', 
-    '&:hover':{
-      transform: 'scale(1.1)',
-    },
-    transition: '.3s ease-in-out'
+    position: 'relative',
   },
   textContainer: {
     position: 'absolute',
     bottom: 10,
+    padding: 2,
     textTransform: "none",
     textAlign: 'start',
-    color: '#FFFFFF'
+    color: '#FFFFFF',
+    '&:hover': {
+      '& .image': {
+        filter: "brightness(0.9)",
+        transform: 'scale(1.02)',
+      }
+    },
   },
   button: {
-    width: '2rem',
-    height: '2rem',
+    width: '2.813rem',
+    height: '2.813rem',
     alignSelf: 'center',
     display: { xs: 'none', sm: 'none', md: 'flex', lg: 'flex', xl: 'flex' },
     marginInline: '1rem',
@@ -147,12 +155,18 @@ const styles = {
   innerCarousel: {
     display: 'flex',
   },
-  storyBottun: {
-    width: 150,
-    height: 200,
+  storyButton: {
+    padding: 0,
     display: 'block',
-    position: 'relative',
     overflow: 'hidden',
-    borderRadius: '10%'
+    borderRadius: '6%',
+    overflow: 'hidden',
+    '&:hover': {
+      '& .image': {
+        filter: "brightness(0.9)",
+        transform: 'scale(1.02)',
+        transition: 'all .3s ease-in-out',
+      }
+    },
   }
 }
